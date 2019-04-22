@@ -13,7 +13,7 @@ function preencheCampos(cep, form) {
         Cidade ${cep.localidade},
         Estado: ${cep.uf}
     `;
-    alert(mensagem);
+    console.log(mensagem);
 }
 
 function buscarCep(event, form) {
@@ -30,15 +30,17 @@ function buscarCep(event, form) {
                 .catch(erro => console.error(erro));
         }
     }
-
-
 }
+
+function handleErrors(res) {
+    if (!res.ok) throw new Error(res.statusText);
+    return res;
+}
+
     /* 
     *** ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ ***
 
-
         ***  Esta seria a requisicão por XHR  ***
-
 
   let xhr = new XMLHttpRequest();
  xhr.open('GET', url, true);
@@ -53,11 +55,4 @@ function buscarCep(event, form) {
  }
  xhr.send();
 
-
     *** ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ *** */
-
-function handleErrors(res) {
-    if (!res.ok) throw new Error(res.statusText);
-    return res;
-}
-
