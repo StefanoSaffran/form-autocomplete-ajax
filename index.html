@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Ajax com JS Puro</title>
-    <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
+    <title>Ajax com JS puro</title>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
 </head>
+
 <body>
-    <form class="o-form">
-        <div class="o-navbar--gary">Buscando CEP com requisição JAX</div>
-        <div class="o-form__body o-form__body--padding">
-            <div class="l-row">
-                <div class="u-grid--2">
-                    <label for="" class="o-form__text">CEP</label>
-                    <div class="o-form__group">
-                        <input class="o-form__data" name="cep" type="text">
-                        <span class="o-form__groupElement"><button class="o-button--gary"><i class="icon-globe"></i></button></span>
+    <main class="main">
+        <h1 class="main-title">Consulta CEP</h1>
+        <div class="container">
+            <form class="form" onsubmit="buscarCep(event, this);">
+                <div class="row has-alignCenter">
+                    <div class="form-group">
+                        <input autofocus autocomplete="off" class="form-results" id="cep" maxlength="8" name="cep"
+                            title="CEP invalido" pattern="^[0-9]{5}-?[0-9]{3}$" placeholder="Digite o CEP aqui" required
+                            type="text">
+                        <span class="form-requirement">* O campo deve ser informado com apenas números.</span>
                     </div>
                 </div>
-                <div class="u-grid--8">
-                    <label for="" class="o-form__text">Endereço</label>
-                    <input class="o-form__data" name="endereco" type="text">
+                <div class="row has-alignCenter">
+                    <button class="form-button" type="submit">Buscar CEP</button>
                 </div>
-                <div class="u-grid--2">
-                    <label for="" class="o-form__text">Numero</label>
-                    <input class="o-form__data" name="numero" type="text">
+                <div class="form-group">
+                    <label for="" class="form-text">Endereço</label>
+                    <input class="form-results" name="endereco" type="text">
                 </div>
-            </div>
-            <div class="l-row">
-                <div class="u-grid--8">
-                    <label for="" class="o-form__text">Bairro</label>
-                    <input class="o-form__data" name="bairro" type="text">
+                <div class="form-group">
+                    <label for="" class="form-text">Bairro</label>
+                    <input class="form-results" name="bairro" type="text">
                 </div>
-                <div class="u-grid--4">
-                    <label for="" class="o-form__text">Complemento</label>
-                    <input class="o-form__data" name="complemento" type="text">
+                <div class="form-group">
+                    <label for="" class="form-text">Complemento</label>
+                    <input class="form-results" name="complemento" type="text">
                 </div>
-            </div>
-            <div class="l-row">
-                <div class="u-grid--10">
-                    <label for="" class="o-form__text">Cidade</label>
-                    <input class="o-form__data" name="cidade" type="text">
+                <div class="form-group">
+                    <label for="" class="form-text">Cidade</label>
+                    <input class="form-results" name="cidade" type="text">
                 </div>
-                <div class="u-grid--2">
-                    <label for="" class="o-form__text">Estado</label>
-                    <input class="o-form__data" name="estado" type="text">
+                <div class="form-group">
+                    <label for="" class="form-text">Estado</label>
+                    <input class="form-results" name="estado" type="text">
                 </div>
-            </div>
+            </form>
         </div>
-    </form>
+    </main>
+    <script src="js/index.js" type="text/javascript"></script>
 </body>
+
 </html>
