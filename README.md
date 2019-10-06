@@ -2,7 +2,10 @@
 
 <p align="center" >
 Project was developed for learning purposes.
-API works only for Brazilian zip codes.
+</p>
+
+<p align="center" >
+* API works only for Brazilian zip codes.
 </p>
 
 ## Built With
