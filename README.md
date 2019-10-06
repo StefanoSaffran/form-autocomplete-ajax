@@ -4,7 +4,7 @@
 Project was developed for learning purposes.
 </p>
 
-<p align="center" >
+<p>
 * API works only for Brazilian zip codes.
 </p>
 
