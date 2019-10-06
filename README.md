@@ -4,10 +4,6 @@
 Project was developed for learning purposes.
 </p>
 
-<p>
-* API works only for Brazilian zip codes.
-</p>
-
 ## Built With
 
 - HTML5
@@ -19,4 +15,8 @@ Project was developed for learning purposes.
 <p align="center">
   <img src="src/assets/consulta-cep01.png" />
   <img src="src/assets/consulta-cep02.png" />
+</p>
+
+<p>
+* API works only for Brazilian zip codes.
 </p>
